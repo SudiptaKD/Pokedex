@@ -16,7 +16,7 @@ const App = () => {
     <Router>
       <Header/>
       <Container>
-        <Route exact path="/" component={Homepage} />
+        <Route exact path={process.env.PUBLIC_URL + '/'} component={Homepage} />
         <Route path="/pokemon/:id" component={PokemonPage}/>
       </Container>
     </Router>
