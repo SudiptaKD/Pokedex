@@ -4,7 +4,7 @@ import { Navbar, Container } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <header>
+        <header style={{height:'10vh'}}>
             <Navbar bg="danger" variant='dark' expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
