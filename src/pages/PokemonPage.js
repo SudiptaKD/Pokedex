@@ -55,22 +55,22 @@ const PokemonPage = ({match}) => {
                         </Link>
                         <Card.Header><strong>Type</strong></Card.Header>
                             <Card.Body>
-                                <Card.Text>
+    
                                     <Row>
                                         {pokemonDetails.types.map(t => (
                                             <Col key={t.type.name}>
-                                                <div className={`${t.type.name} rounded px-4 py-1`} style={{ color: 'white' }}>
+                                                <span className={`${t.type.name} rounded px-4 py-1`} style={{ color: 'white' }}>
                                                     {t.type.name.toUpperCase()}
-                                                </div>
+                                                </span>
                                             </Col>
                                         ))}
                                     </Row>
-                                </Card.Text>
+                        
                             </Card.Body>
                     </Card>
-                    <Card className='p-3 rounded text-center shadow p-3 mb-5 bg-white' style={{ border: 'none', height:'300px' }}>
+                    <Card className='p-3 rounded text-center shadow p-3 mb-5 bg-white' style={{ border: 'none', minHeight:'300px' }}>
                             <Card.Body>
-                                <Card.Text>
+                                
                                     <Row>
                                         <Col sm={6} xs={12}>
                                             <Card.Img style={{ width: '13rem' }} src={pokemonDetails.sprites.front_default}/>
@@ -81,7 +81,7 @@ const PokemonPage = ({match}) => {
                                             <Card.Text style={{fontSize:'17px'}}>Shiny Form</Card.Text>
                                         </Col>
                                     </Row>
-                                </Card.Text>
+        
                             </Card.Body>
                         </Card>
                 </Col>
@@ -89,7 +89,7 @@ const PokemonPage = ({match}) => {
                         <Card className='p-3 my-3 rounded text-center shadow p-3 mb-5 bg-secondary' style={{ border: 'none' }}>
                             <Card.Body>
                                 <Card.Title style={{color:'#18469e',fontSize:"30px"}}>Stats</Card.Title>
-                                <Card.Text>
+                        
                                 <strong>HP</strong> 
                                 <ProgressBar  animated variant="success" label={`${pokemonDetails.stats[0].base_stat}%`}
                                     now={pokemonDetails.stats[0].base_stat} />
@@ -114,12 +114,12 @@ const PokemonPage = ({match}) => {
                                 <ProgressBar animated variant="info" label={`${pokemonDetails.stats[5].base_stat}%`}
                                     now={pokemonDetails.stats[5].base_stat} /> 
                                 <br/>
-                                </Card.Text>
+                        
                             </Card.Body>
                         </Card>
-                        <Card className='p-3 my-3 rounded text-center shadow p-3 mb-5 bg-info' style={{ border: 'none', height:'300px' }}>
+                        <Card className='p-3 my-3 rounded text-center shadow p-3 mb-5 bg-info' style={{ border: 'none', minHeight:'304px' }}>
                             <Card.Body>
-                                <Card.Text>
+                
                                     <Row >
                                         <Col xs={6} >
                                             <Row style={{paddingLeft:'50px'}}>
@@ -174,7 +174,6 @@ const PokemonPage = ({match}) => {
                                             </Row>
                                         </Col>
                                     </Row>
-                                </Card.Text>
                             </Card.Body>
                         </Card>
                 </Col>

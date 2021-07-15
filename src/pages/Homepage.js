@@ -21,8 +21,10 @@ const Homepage = () => {
     }
 
     const getPokemonData = async (id) => {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`, {
-            headers: {"Access-Control-Allow-Origin": "*"}
+        const res = await axios.get(`/api/v2/pokemon/${id}`, {
+            headers: {"Access-Control-Allow-Origin": "*",
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            'Content-Type': 'application/jsonp'}
         });
         return res;
     }
