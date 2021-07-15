@@ -1,27 +1,20 @@
 import React from 'react'
-import { Spinner, Row, Col } from 'react-bootstrap'
+import "./loader.css"
+import { Row,Col } from 'react-bootstrap'
 
 const Loader = () => {
     return (
-        <div className="d-flex justify-content-center mt-5" style= {{height: '100vh'}} >
-            <Row>
-                <Col>
-                <Spinner animation="border" variant="primary" />
-                <Spinner animation="grow" variant="primary" />
-                <Spinner animation="border" variant="secondary" />
-                <Spinner animation="grow" variant="secondary" />
-                <Spinner animation="border" variant="success" />
-                <Spinner animation="grow" variant="success" />
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <div className="mx-3">
-                        Fetching pokemon...
-                    </div>
-                </Col>
-            </Row>
-        </div>
+		<Row style={{height:'90vh'}}>
+			<Col xs={12} xl={12}>
+				<div  className="sk-folding-cube">
+					<div className="sk-cube1 sk-cube"></div>
+					<div className="sk-cube2 sk-cube"></div>
+					<div className="sk-cube4 sk-cube"></div>
+					<div className="sk-cube3 sk-cube"></div>
+				</div>
+				</Col>
+		</Row>
+       
     )
 }
 

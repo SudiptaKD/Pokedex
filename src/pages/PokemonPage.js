@@ -19,7 +19,7 @@ const PokemonPage = ({match}) => {
     }   
     
     const getPokemonData = async (id) => {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const res = await axios.get(`/api/v2/pokemon/${id}`);
         return res;
     }
     useEffect (()=>{

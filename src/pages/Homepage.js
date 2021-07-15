@@ -5,7 +5,6 @@ import { Row, Col } from 'react-bootstrap';
 // Components
 import Pokemon from '../components/Pokemon';
 import Loader from '../components/Loader';
-import Looader from '../components/Looader';
 
 const Homepage = () => {
 
@@ -14,16 +13,17 @@ const Homepage = () => {
 
     const getPokemonList = async () => {
         let pokemonArray = [];
-        for(let i = 1; i <= 80; i ++){
+        for(let i = 1; i <= 30; i ++){
             pokemonArray.push(await getPokemonData(i));
         }
-        console.log(pokemonArray);
         setPokemon(pokemonArray);
         setLoading(false);
     }
 
     const getPokemonData = async (id) => {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`, {
+            headers: {"Access-Control-Allow-Origin": "*"}
+        });
         return res;
     }
 
@@ -34,7 +34,7 @@ const Homepage = () => {
     return (
         <>
         {loading ? (
-            <Looader />
+            <Loader />
         ) : (
             <Row xl={5} lg={4} md={3} sm={2} xs={1}  >
                 {pokemon.map( p =>(
