@@ -20,12 +20,15 @@ const Homepage = () => {
         setLoading(false);
     }
 
+
     const getPokemonData = async (id) => {
-        const res = await axios.get(`/api/v2/pokemon/${id}`, {
-            headers: {"Access-Control-Allow-Origin": "*",
-            'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-            'Content-Type': 'application/jsonp'}
-        });
+        //const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`
+        const res = await axios.get(`https://pokeapi-215911.firebaseapp.com/api/v2/pokemon/${id}`
+        // , {
+        //     headers: {"Access-Control-Allow-Origin": "*",
+        //     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        //     'Content-Type': 'application/jsonp'}}
+        );
         return res;
     }
 

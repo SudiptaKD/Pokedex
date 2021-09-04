@@ -1,15 +1,15 @@
 import React from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <header style={{height:'10vh'}}>
             <Navbar bg="danger" variant='dark' expand="lg" collapseOnSelect>
                 <Container>
-                    <LinkContainer to="/">
+                    <Link to="/Pokedex">
                         <Navbar.Brand>Pokemon Deck</Navbar.Brand>
-                    </LinkContainer>
+                    </Link>
                 </Container>
             </Navbar>
         </header>

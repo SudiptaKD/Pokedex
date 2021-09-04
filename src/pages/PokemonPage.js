@@ -19,12 +19,14 @@ const PokemonPage = ({match}) => {
     }   
     
     const getPokemonData = async (id) => {
-        const res = await axios.get(`/api/v2/pokemon/${id}`);
+        //const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const res = await axios.get(`https://pokeapi-215911.firebaseapp.com/api/v2/pokemon/${id}`);
         return res;
     }
     useEffect (()=>{
         getPokemon(id)
-    },[])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
 
     return (
